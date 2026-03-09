@@ -1,13 +1,22 @@
+import { motion } from "framer-motion";
+
 interface VideoCardProps {
   title: string;
   tag: string;
   youtubeId: string;
   description: string;
+  index?: number;
 }
 
-const VideoCard = ({ title, tag, youtubeId, description }: VideoCardProps) => {
+const VideoCard = ({ title, tag, youtubeId, description, index = 0 }: VideoCardProps) => {
   return (
-    <div className="bg-card rounded-lg overflow-hidden flex flex-col h-full">
+    <motion.div
+      className="bg-card rounded-lg overflow-hidden flex flex-col h-full"
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
+    >
       <div className="relative w-full" style={{ paddingBottom: "177.78%" }}>
         <iframe
           className="absolute inset-0 w-full h-full"
@@ -26,7 +35,7 @@ const VideoCard = ({ title, tag, youtubeId, description }: VideoCardProps) => {
           {description}
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
