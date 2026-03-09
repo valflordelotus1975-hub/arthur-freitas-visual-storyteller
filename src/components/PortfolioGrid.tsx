@@ -35,8 +35,8 @@ const PortfolioGrid = () => {
   return (
     <section className="px-4 md:px-8 max-w-6xl mx-auto py-8">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {projects.map((project) => (
-          <VideoCard key={project.youtubeId} {...project} />
+        {projects.map((project, index) => (
+          <VideoCard key={project.youtubeId} {...project} index={index} />
         ))}
       </div>
     </section>
