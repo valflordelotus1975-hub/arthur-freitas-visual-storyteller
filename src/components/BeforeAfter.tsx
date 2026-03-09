@@ -5,8 +5,8 @@ const BeforeAfter = () => {
       <div className="flex items-center gap-4 mb-10">
         <div className="flex-1 h-px bg-border" />
         <h2
-          className="font-ui uppercase text-muted-foreground text-xs whitespace-nowrap"
-          style={{ letterSpacing: "0.35em" }}
+          className="font-ui uppercase text-primary whitespace-nowrap"
+          style={{ fontSize: "13px", letterSpacing: "0.4em" }}
         >
           Antes e Depois
         </h2>
@@ -17,15 +17,15 @@ const BeforeAfter = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <p
-            className="font-ui uppercase text-muted-foreground text-center mb-3"
-            style={{ fontSize: "10px", letterSpacing: "0.3em" }}
+            className="font-ui uppercase text-primary text-center mb-3"
+            style={{ fontSize: "13px", letterSpacing: "0.4em" }}
           >
             Antes
           </p>
           <div className="bg-card rounded-lg overflow-hidden relative" style={{ paddingBottom: "177.78%" }}>
             <iframe
               className="absolute inset-0 w-full h-full"
-              src="https://www.youtube.com/embed/r_DrDHASNb4?vq=hd1080"
+              src="https://www.youtube.com/embed/r_DrDHASNb4?modestbranding=1&rel=0&showinfo=0&controls=1&iv_load_policy=3"
               title="Antes"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
@@ -34,15 +34,15 @@ const BeforeAfter = () => {
         </div>
         <div>
           <p
-            className="font-ui uppercase text-muted-foreground text-center mb-3"
-            style={{ fontSize: "10px", letterSpacing: "0.3em" }}
+            className="font-ui uppercase text-primary text-center mb-3"
+            style={{ fontSize: "13px", letterSpacing: "0.4em" }}
           >
             Depois
           </p>
           <div className="bg-card rounded-lg overflow-hidden relative" style={{ paddingBottom: "177.78%" }}>
             <iframe
               className="absolute inset-0 w-full h-full"
-              src="https://www.youtube.com/embed/R_GDz_3ml4o?vq=hd1080"
+              src="https://www.youtube.com/embed/R_GDz_3ml4o?modestbranding=1&rel=0&showinfo=0&controls=1&iv_load_policy=3"
               title="Depois"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
@@ -53,14 +53,12 @@ const BeforeAfter = () => {
 
       {/* Description */}
       <div className="mt-8 text-center max-w-2xl mx-auto">
-        <h3 className="font-ui text-sm font-semibold text-foreground uppercase tracking-wider">
-          Recut de vídeo gastronômico (Café da Origem)
+        <h3 className="font-ui font-semibold text-foreground uppercase tracking-wider mb-2" style={{ fontSize: "16px" }}>
+          Café da Origem
         </h3>
-        <p className="font-body text-sm text-secondary-foreground mt-3 leading-relaxed">
-          Análise e reconstrução de material existente. Problema identificado: takes de 40 segundos
-          sem sincronia com a música mesmo em ritmo acelerado. Solução: cortes cirúrgicos
-          sincronizados nas batidas, ritmo reconstruído e storytelling visual aplicado. Mesmo
-          material bruto, resultado completamente diferente.
+        <p style={{ fontSize: "14px" }} className="font-body text-secondary-foreground leading-relaxed">
+          <span className="font-semibold text-foreground/70">Storytelling Visual:</span>{" "}
+          Recut de material existente com maior dinâmica visual — do processo de produção à mesa do espectador.
         </p>
       </div>
     </section>
